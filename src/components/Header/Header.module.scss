@@ -1,0 +1,51 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+.header {
+  border-bottom: rem(1) solid $gray-line;
+  @include adaptiveValue("padding-top", 40, 10);
+  @include adaptiveValue("padding-bottom", 40, 10);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    img {
+      @include adaptiveValue("margin-right", 15, 10);
+    }
+  }
+  
+  &__blockText {
+    @media (max-width: em(479.98)){
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 24, 16);
+    line-height: math.div(30, 24);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  &__subTitle {
+    color: $darkColor;
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(22, 18);
+    @media (max-width: em(479.98)){
+        display: none;
+    }
+  }
+  
+  &__cart {
+      
+  }
+
+}

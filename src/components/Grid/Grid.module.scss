@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+.GridFourColumns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: rem(10);
+  @include adaptiveValue("column-gap", 40, 10);
+  @media (max-width: em(800)){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: em(700)){
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: em(500)){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

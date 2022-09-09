@@ -1,0 +1,108 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+
+//=ButtonCart==================================================================================================
+.buttonCart {
+  background-color: $orangeColor;
+  border-radius: rem(30);
+  @include adaptiveValue("min-width", 100, 80);
+  text-align: center;
+  cursor: pointer;
+  border: rem(1) solid transparent;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("font-size", 20, 14);
+  line-height: math.div(23, 20);
+  @include adaptiveValue("padding-top", 12, 10);
+  @include adaptiveValue("padding-bottom", 12, 10);
+  @include adaptiveValue("padding-right", 25, 20);
+  @include adaptiveValue("padding-left", 25, 20);
+
+  span {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 16, 14);
+    color: $whiteColor;
+    @include adaptiveValue("margin-left", 8, 5);
+  }
+
+  svg {
+    margin-bottom: rem(1);
+  }
+}
+
+.button__delimiter {
+  width: rem(1);
+  height: rem(25);
+  background-color: rgba(255, 255, 255, 0.25);
+  @include adaptiveValue("margin-left", 14, 10);
+  @include adaptiveValue("margin-right", 14, 10);
+}
+
+//=ButtonAdd==================================================================================================
+
+.buttonAdd {
+  display: inline-block;
+  border-radius: rem(30);
+  @include adaptiveValue("padding-top", 10, 8);
+  @include adaptiveValue("padding-bottom", 10, 8);
+  @include adaptiveValue("padding-right",20,16);
+  @include adaptiveValue("padding-left", 20, 16);
+  @include adaptiveValue("min-width", 100, 80);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  user-select: none;
+  background-color: $whiteColor;
+  border: rem(1) solid $orangeColor;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i {
+    @include adaptiveValue("margin-left", 8, 5);
+    border-radius: rem(30);
+    background-color: $orangeColor;
+    color: $whiteColor;
+    font-weight: 600;
+    @include adaptiveValue("width", 22, 18);
+    @include adaptiveValue("height", 22, 18);
+    font-style: normal;
+    @include adaptiveValue("font-size", 15, 12);
+    line-height: math.div(22, 15);
+    position: relative;
+  }
+
+  svg {
+    @include adaptiveValue("margin-right", 8, 5);
+    stroke: $orangeColor;
+  }
+
+  span {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 16, 14);
+    color: $orangeColor;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $orangeColor;
+
+      span {
+        color: $whiteColor;
+      }
+
+      i {
+        background-color: $whiteColor;
+        color: $orangeColor;
+      }
+    }
+  }
+}
+
+

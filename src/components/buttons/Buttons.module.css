@@ -1,0 +1,48 @@
+/*
+Error: Invalid CSS after "...ne-height: math": expected ";", was ".div(23, 20);"
+        on line 18 of Buttons.module.scss
+
+13:   border: rem(1) solid transparent;
+14:   transition: all 0.3s ease 0s;
+15:   display: flex;
+16:   align-items: center;
+17:   @include adaptiveValue("font-size", 20, 14);
+18:   line-height: math.div(23, 20);
+19:   @include adaptiveValue("padding-top", 12, 10);
+20:   @include adaptiveValue("padding-bottom", 12, 10);
+21:   @include adaptiveValue("padding-right", 25, 20);
+22:   @include adaptiveValue("padding-left", 25, 20);
+23: 
+
+Backtrace:
+Buttons.module.scss:18
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...ne-height: math\": expected \";\", was \".div(23, 20);\"\A         on line 18 of Buttons.module.scss\A \A 13:   border: rem(1) solid transparent;\A 14:   transition: all 0.3s ease 0s;\A 15:   display: flex;\A 16:   align-items: center;\A 17:   @include adaptiveValue(\"font-size\", 20, 14);\A 18:   line-height: math.div(23, 20);\A 19:   @include adaptiveValue(\"padding-top\", 12, 10);\A 20:   @include adaptiveValue(\"padding-bottom\", 12, 10);\A 21:   @include adaptiveValue(\"padding-right\", 25, 20);\A 22:   @include adaptiveValue(\"padding-left\", 25, 20);\A 23: "; }

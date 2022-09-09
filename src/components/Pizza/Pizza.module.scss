@@ -1,0 +1,74 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+.pizza {
+  &__container {
+
+  }
+
+  &Block {
+
+    &__image {
+      text-align: center;
+      img {
+        width: 100%;
+        max-width: rem(260);
+      }
+    }
+
+    &__title {
+      font-weight: 900;
+      @include adaptiveValue("font-size", 20, 18);
+      line-height: math.div(30, 20);
+      letter-spacing: 0.037rem;
+      &:not(:last-child) {
+          @include adaptiveValue("margin-bottom", 20, 15);
+      }
+    }
+
+    &__selector {
+
+    }
+
+    &__bottom {
+
+    }
+  }
+}
+
+.selectorBlockPizza {
+  display: flex;
+  background-color: $gray-line;
+  border-radius: rem(10);
+  flex-direction: column;
+  @include adaptiveValue("padding", 6, 4);
+  &__list {
+    display: flex;
+    flex: 1
+  }
+
+  &__item {
+    padding: 8px;
+    flex: 1;
+    cursor: pointer;
+    font-weight: 600;
+    user-select: none
+  }
+}
+
+.bottomBlockPizza {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 10);
+  }
+  &__prise {
+    @include adaptiveValue("font-size", 22, 18);
+    line-height: math.div(27, 22);
+    font-weight: bold;
+    letter-spacing: 0.015em
+
+  }
+}
