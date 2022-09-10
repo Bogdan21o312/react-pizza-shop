@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "...ing: 0 rem(math": expected ")", was ".div($container..."
-        on line 110 of Style.scss
+        on line 115 of Style.scss
 
-105:       max-width: rem($maxWidthContainer);
-106:       box-sizing: content-box;
-107:       margin: 0 auto;
-108:     }
-109:     @if ($containerPadding>0) {
-110:       padding: 0 rem(math.div($containerPadding, 2));
-111:     }
-112:   }
-113: } @else {
-114:   // By break points
-115:   [class*="__container"] {
+110:       max-width: rem($maxWidthContainer);
+111:       box-sizing: content-box;
+112:       margin: 0 auto;
+113:     }
+114:     @if ($containerPadding>0) {
+115:       padding: 0 rem(math.div($containerPadding, 2));
+116:     }
+117:   }
+118: } @else {
+119:   // By break points
+120:   [class*="__container"] {
 
 Backtrace:
-Style.scss:110
+Style.scss:115
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/lexer.rb:240:in `expected!'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/script/parser.rb:862:in `assert_tok'
@@ -77,4 +77,4 @@ Style.scss:110
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...ing: 0 rem(math\": expected \")\", was \".div($container...\"\A         on line 110 of Style.scss\A \A 105:       max-width: rem($maxWidthContainer);\A 106:       box-sizing: content-box;\A 107:       margin: 0 auto;\A 108:     }\A 109:     @if ($containerPadding>0) {\A 110:       padding: 0 rem(math.div($containerPadding, 2));\A 111:     }\A 112:   }\A 113: } @else {\A 114:   // By break points\A 115:   [class*=\"__container\"] {"; }
+  content: "Error: Invalid CSS after \"...ing: 0 rem(math\": expected \")\", was \".div($container...\"\A         on line 115 of Style.scss\A \A 110:       max-width: rem($maxWidthContainer);\A 111:       box-sizing: content-box;\A 112:       margin: 0 auto;\A 113:     }\A 114:     @if ($containerPadding>0) {\A 115:       padding: 0 rem(math.div($containerPadding, 2));\A 116:     }\A 117:   }\A 118: } @else {\A 119:   // By break points\A 120:   [class*=\"__container\"] {"; }

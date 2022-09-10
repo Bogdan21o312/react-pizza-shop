@@ -52,6 +52,7 @@ $responsiveType: 1;
 
 body {
   // Scroll blocked
+  background-color: $backgroundColor;
   .lock & {
     overflow: hidden;
     touch-action: none;
@@ -68,6 +69,10 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  margin: 50px auto;
+  background-color: $whiteColor;
+  border-radius: rem(10);
+  max-width: 2000px;
   // Press footer
   > main {
     flex: 1 1 auto;

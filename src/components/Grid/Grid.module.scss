@@ -7,7 +7,7 @@
   grid-template-columns: repeat(4, 1fr);
   row-gap: rem(10);
   @include adaptiveValue("column-gap", 40, 10);
-  @media (max-width: em(800)){
+  @media (max-width: em(900)){
     grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: em(700)){

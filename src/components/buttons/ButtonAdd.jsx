@@ -2,8 +2,14 @@ import React from 'react';
 import classes from "./Buttons.module.scss";
 
 const ButtonAdd = () => {
+    const [pizzaCount, setPizzaCount] = React.useState(0);
+
+    const onClickAdd = () => {
+        setPizzaCount(pizzaCount + 1);
+    }
+
     return (
-        <div className={classes.buttonAdd}>
+        <button onClick={onClickAdd} className={classes.buttonAdd}>
             <div>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -11,9 +17,9 @@ const ButtonAdd = () => {
                         fill="white"/>
                 </svg>
                 <span>Добавить</span>
-                <i>2</i>
+                <i>{pizzaCount}</i>
             </div>
-        </div>
+        </button>
     );
 };
 
