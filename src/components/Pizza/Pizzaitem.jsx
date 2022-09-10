@@ -1,19 +1,11 @@
 import React from 'react';
 import classes from "./Pizza.module.scss"
 import ButtonAdd from "../buttons/ButtonAdd";
+import {typesName} from "./Pizzaitems";
 
-
-const Pizzaitem = ({sizes, imageUrl, title, price}) => {
+const Pizzaitem = ({sizes, imageUrl, title, price, types}) => {
     const [activeType, setActiveType] = React.useState(0);
     const [activeSize, setActiveSize] = React.useState(0);
-
-    const onClickType = (type) => {
-        setActiveType(type);
-    }
-
-    const onClickSize = (size) => {
-        setActiveSize(size);
-    }
 
     return (
         <>
@@ -24,24 +16,22 @@ const Pizzaitem = ({sizes, imageUrl, title, price}) => {
                 <h4 className={classes.pizzaBlock__title}>{title}</h4>
                 <div className={classes.pizzaBlock__selector}>
                     <div className={classes.selectorBlockPizza}>
-                        {/*<ul className={classes.selectorBlockPizza__list}>*/}
-                        {/*    {item.types.map((typeId) => (*/}
-                        {/*        <li*/}
-                        {/*            key={typeId}*/}
-                        {/*            onClick={() => onClickType(typeId)}*/}
-                        {/*            className={`${classes.selectorBlockPizza__item} */}
-                        {/*                ${activeType === typeId ? classes.active : ''}`*/}
-                        {/*            }>{typesName[typeId]}*/}
-                        {/*        </li>*/}
-                        {/*    ))}*/}
-                        {/*</ul>*/}
+                        <ul className={classes.selectorBlockPizza__list}>
+                            {types.map((typeId) => (
+                                <li
+                                    onClick={() => setActiveType(typeId)}
+                                    className={`${classes.selectorBlockPizza__item} 
+                                    ${activeType === typeId ? classes.active : ''}`
+                                    }>{typesName[typeId]}
+                                </li>
+                            ))}
+                        </ul>
                         <ul className={classes.selectorBlockPizza__list}>
                             {sizes.map((size, i) => (
-                                <li onClick={() => onClickSize(i)} className={
-                                    `${classes.selectorBlockPizza__item} 
-                                            ${activeSize === i ?
-                                        classes.active : ''}`
-                                }>{size} см.</li>
+                                <li onClick={() => setActiveSize(i)}
+                                    className={`${classes.selectorBlockPizza__item} 
+                                            ${activeSize === i ? classes.active : ''}`
+                                    }>{size} см.</li>
                             ))}
                         </ul>
                     </div>

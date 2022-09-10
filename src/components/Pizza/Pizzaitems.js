@@ -1,3 +1,5 @@
+export const typesName = ['thin', 'traditional'];
+
 export const Pizzaitems = [
     {
         "id": 0,

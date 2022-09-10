@@ -11,7 +11,7 @@ const Pizza = () => {
                 <div className={classes.pizza__title}>All Pizza</div>
                 <GridFourColumns>
                     {Pizzaitems.map((obj) => (
-                        <Pizzaitem sizes={obj.sizes} price={obj.price}/>
+                        <Pizzaitem {...obj}/>
                     ))}
                 </GridFourColumns>
             </div>

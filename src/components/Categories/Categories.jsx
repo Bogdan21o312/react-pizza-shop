@@ -1,22 +1,16 @@
 import React from 'react';
 import classes from "./Categories.module.scss";
-import {Categoryitems} from "./Categoryitem";
 
-const Categories = () => {
+const Categories = ({caregories}) => {
 
     const [activeCategory, setActiveCategory] = React.useState(0)
-
-    const onClickCategory = (category) => {
-        setActiveCategory(category);
-    }
 
     return (
         <section className={classes.categories}>
             <div className={classes.categories__container}>
                 <ul className={classes.categories__list}>
-                    {Categoryitems.map((value, index) => (
-                        <li onClick={() =>
-                            onClickCategory(index)}
+                    {caregories.map((value, index) => (
+                        <li onClick={() => setActiveCategory(index)}
                             className={
                                 `${classes.categories__item} 
                                  ${activeCategory === index ?
