@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import "../../assets/style/Style.scss"
 
 const Layout = ({children, ...props}) => {
+
     return (
         <div className="wrapper">
             <Header/>

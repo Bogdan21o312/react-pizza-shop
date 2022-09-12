@@ -5,9 +5,25 @@
 .categories {
 
   &__container {
+
+  }
+  
+  &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 900;
+    @include adaptiveValue("font-size", 40, 20);
+    line-height: math.div(30, 20);
+    letter-spacing: 0.037rem;
+
+    &:last-child {
+    @include adaptiveValue("margin-bottom", 40, 20);
+    @include adaptiveValue("margin-top", 40, 20);
+  }
   }
 
   &__list {
@@ -24,43 +40,6 @@
     @include adaptiveValue("margin-right", 10, 5);
     font-weight: bold;
     cursor: pointer;
-  }
-
-  &__sort {
-    position: relative;
-    display: flex;
-    align-items: center;
-    @include adaptiveValue("gap", 8, 5);
-
-    span {
-      color: $orangeColor;
-      border-bottom: rem(1) dashed $orangeColor;
-      cursor: pointer
-    }
-  }
-
-  &__popup {
-    position: absolute;
-    right: 0;
-    top: 0;
-    @include adaptiveValue("margin-top", 15, 10);
-    background: #ffffff;
-    -webkit-box-shadow: 0 rem(5) rem(15) rgba(0, 0, 0, 0.09);
-    box-shadow: 0 rem(5) rem(15) rgba(0, 0, 0, 0.09);
-    border-radius: rem(10);
-    overflow: hidden;
-    padding: rem(10) 0;
-    width: rem(160);
-
-    &_list {
-      overflow: hidden
-    }
-
-    &_item {
-      padding: rem(12) rem(20);
-      cursor: pointer;
-    }
-
   }
 
 }

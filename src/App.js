@@ -1,13 +1,11 @@
-import React, {useState} from "react";
-import Layout from "./components/Layout/Layout";
-import Home from "./page/Home";
+import React from "react";
+import AppRouter from "./components/router/AppRouter";
 
 function App() {
 
-
     return (
         <div>
-            <Home/>
+            <AppRouter/>
         </div>
     );
 }

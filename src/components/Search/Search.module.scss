@@ -1,0 +1,47 @@
+@use "sass:math";
+
+@import "src/assets/style/Style";
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("gap", 10, 5);
+  border: rem(1) solid rgba(0, 0, 0, 0.1);
+  border-radius: rem(10);
+  @include adaptiveValue("margin-right", 100, 10);
+  width: 100%;
+  @include adaptiveValue("max-width", 600, 300);
+}
+
+.input {
+  @include adaptiveValue("padding-top", 12, 10);
+  @include adaptiveValue("padding-bottom", 12, 10);
+  @include adaptiveValue("padding-right", 20, 15);
+  @include adaptiveValue("font-size", 16, 15);
+  width: 100%;
+  @include adaptiveValue("max-width", 600, 300);
+  &:focus {
+  }
+}
+
+.icon {
+  @include adaptiveValue("width", 22, 18);
+  @include adaptiveValue("height", 22, 18);
+  @include adaptiveValue("margin-left", 10, 5);
+  opacity: 0.3;
+}
+
+.clearIcon {
+  @include adaptiveValue("width", 18, 16);
+  @include adaptiveValue("height", 18, 16);
+  @include adaptiveValue("margin-right", 20, 10);
+  @include adaptiveValue("margin-left", 20, 10);
+  
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

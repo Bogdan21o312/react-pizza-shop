@@ -1,9 +1,10 @@
 import React from 'react';
 import classes from "./Buttons.module.scss"
+import {Link} from "react-router-dom";
 
 const ButtonCart = () => {
     return (
-        <button className={classes.buttonCart}>
+        <Link to="/cart" className={classes.buttonCart}>
             <span>520 $</span>
             <div className={classes.button__delimiter}></div>
             <svg
@@ -36,7 +37,7 @@ const ButtonCart = () => {
                 />
             </svg>
             <span>3</span>
-        </button>
+        </Link>
     );
 };
 

@@ -10,11 +10,11 @@
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 
   &__logo {
     display: flex;
+    @include adaptiveValue("padding-right", 100, 10);
     img {
       @include adaptiveValue("margin-right", 15, 10);
     }
@@ -45,7 +45,7 @@
   }
   
   &__cart {
-      
+    margin-left: auto;
   }
 
 }
