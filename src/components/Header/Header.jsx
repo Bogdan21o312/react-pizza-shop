@@ -17,7 +17,7 @@ const Header = () => {
                         <p className={classes.header__subTitle}>the most delicious pizza in the universe</p>
                     </div>
                 </Link>
-                <Search/>
+                {/*<Search/>*/}
                 <div className={classes.header__cart}>
                     <ButtonCart/>
                 </div>

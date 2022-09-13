@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import Home from "../../page/Home";
 import Error from "../../page/Error";
 
@@ -8,7 +8,11 @@ const AppRouter = () => {
         <>
             <Routes>
                 <Route path="/" element={<Home/>}/>
-                <Route path="*" element={<Error/>}/>
+                <Route path="/error" element={<Error/>}/>
+                <Route
+                    path="*"
+                    element={<Navigate to="/error" replace/>}
+                />
             </Routes>
         </>
     );
