@@ -32,8 +32,7 @@ const Pizzaitem = ({sizes, imageUrl, title, price, types}) => {
                                 <li
                                     key={size}
                                     onClick={() => setActiveSize(i)}
-                                    className={`${classes.selectorBlockPizza__item} 
-                                            ${activeSize === i ? classes.active : ''}`
+                                    className={`${classes.selectorBlockPizza__item} ${activeSize === i ? classes.active : ''}`
                                     }>{size} см.
                                 </li>
                             ))}
