@@ -1,10 +1,9 @@
 import React, {FC} from 'react';
 import classes from "./Pizza.module.scss";
-// import GridFourColumns from "../Grid/GridFourColumns";
+import GridFourColumns from "../Grid/GridFourColumns";
 import Pizzaitem from "./Pizzaitem";
 import PizzaSkeleton from "./PizzaSkeleton";
 import {Pizzaitems} from "./Pizzaitems";
-import GridFourColumns from "../Grid/GridFourColumns";
 
 type Any = {
     searchValue?: any,
@@ -29,9 +28,9 @@ const Pizza: FC<Any> = ({searchValue}) => {
 
     const PizzaSearchFilter = pizzaItems
         .filter((obj: any) => {
-            // if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
-            //     return true;
-            // }
+            if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+                return true;
+            }
             return true;
         })
     .map((obj: any) => (<Pizzaitem key={obj.id}  {...obj}/>))

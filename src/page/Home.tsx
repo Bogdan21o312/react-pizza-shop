@@ -3,14 +3,15 @@ import Categories from "../components/Categories/Categories";
 import Layout from "../components/Layout/Layout";
 import Pizza from "../components/Pizza/Pizza";
 import {Categoryitems} from "../components/Categories/Categoryitem";
+import {Provider} from "react-redux";
 
 
 type Any = {
     SearchContext: any,
     createContext: any,
+    value: any,
 }
 
-// export const SearchContext = createContext();
 
 
 
@@ -19,12 +20,12 @@ const Home = () => {
 
 
     return (
-        // <SearchContext.Provider value={{searchValue, setSearchValue}}>
+        <div>
             <Layout>
                 <Categories caregories={Categoryitems}/>
                 <Pizza searchValue={searchValue}/>
             </Layout>
-         // </SearchContext.Provider>
+          </div>
     );
 };
 
